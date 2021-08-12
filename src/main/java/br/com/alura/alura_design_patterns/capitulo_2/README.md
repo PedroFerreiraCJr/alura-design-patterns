@@ -1,0 +1,1 @@
+## Este capítulo implementou o design pattern Chain Of Responsability.
