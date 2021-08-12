@@ -1,4 +1,7 @@
-package br.com.alura.alura_design_patterns.capitulo_1.modelo;
+package br.com.alura.alura_design_patterns.capitulo_1.service;
+
+import br.com.alura.alura_design_patterns.capitulo_1.modelo.Imposto;
+import br.com.alura.alura_design_patterns.capitulo_1.modelo.Orcamento;
 
 /**
  * #Contexto: É necessário calcular o valor do imposto de acordo com o imposto
@@ -20,13 +23,14 @@ package br.com.alura.alura_design_patterns.capitulo_1.modelo;
  *
  */
 public class CalculadorImposto {
-	public void realizarCalculoICMS(Orcamento orcamento) {
-		double icms = new ICMS().calcularICMS(orcamento);
-		System.out.println(icms);
-	}
-
-	public void realizarCalculoISS(Orcamento orcamento) {
-		double iss = new ISS().calcularISS(orcamento);
-		System.out.println(iss);
+	/**
+	 * Quando várias classes relacionadas possuem uma API em comum, 
+	 * é possível extrair um contrato - interface.
+	 */
+	public void realizarCalculo(Orcamento orcamento, Imposto imposto) {
+		double valor = imposto.calcular(orcamento);
+		System.out.println("Valor do Orcamento com Imposto");
+		double total = valor + orcamento.getValor();
+		System.out.println(total);
 	}
 }
