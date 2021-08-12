@@ -24,11 +24,11 @@ package br.com.alura.alura_design_patterns.capitulo_1.modelo;
 public class CalculadorImposto {
 	public void realizarCalculo(Orcamento orcamento, String imposto) {
 		if ("ICMS".equals(imposto)) {
-			double icms = orcamento.getValor() * 0.1;
+			double icms = new ICMS().calcularICMS(orcamento);
 			System.out.println(icms);			
 		}
 		else if ("ISS".equals(imposto)) {
-			double iss = orcamento.getValor() * 0.06;
+			double iss = new ISS().calcularISS(orcamento);
 			System.out.println(iss);			
 		}
 	}
