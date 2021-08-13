@@ -2,10 +2,13 @@ package br.com.alura.alura_design_patterns.capitulo_2.regras;
 
 import br.com.alura.alura_design_patterns.capitulo_1.modelo.Orcamento;
 
-public class SemDesconto extends AbstractDesconto {
+public class AbstractDesconto implements Desconto {
 
-	public SemDesconto() {
-		super(null);
+	protected Desconto proximo;
+
+	protected AbstractDesconto(Desconto proximo) {
+		super();
+		this.proximo = proximo;
 	}
 
 	@Override

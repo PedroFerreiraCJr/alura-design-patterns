@@ -18,10 +18,4 @@ public interface Desconto {
 	 */
 	public abstract double descontar(Orcamento orcamento);
 
-	/**
-	 * Método que deve chamar o próximo algoritmo de verificação de desconto.
-	 * 
-	 * @param desconto
-	 */
-	public abstract void setProximo(Desconto desconto);
 }

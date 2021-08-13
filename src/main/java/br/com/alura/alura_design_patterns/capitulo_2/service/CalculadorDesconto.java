@@ -9,14 +9,10 @@ import br.com.alura.alura_design_patterns.capitulo_2.regras.SemDesconto;
 
 public class CalculadorDesconto {
 	public double calcular(Orcamento orcamento) {
-		Desconto d1 = new DescontoPorCincoItens();
-		Desconto d2 = new DescontoPorMaisDeQuinhentosReais();
-		Desconto d3 = new DescontoPorVendaCasada();
 		Desconto semDesconto = new SemDesconto();
-
-		d1.setProximo(d2);
-		d2.setProximo(d3);
-		d3.setProximo(semDesconto);
+		Desconto d3 = new DescontoPorVendaCasada(semDesconto);
+		Desconto d2 = new DescontoPorMaisDeQuinhentosReais(d3);
+		Desconto d1 = new DescontoPorCincoItens(d2);
 
 		return d1.descontar(orcamento);
 	}

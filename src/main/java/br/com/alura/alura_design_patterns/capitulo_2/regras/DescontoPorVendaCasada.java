@@ -3,9 +3,11 @@ package br.com.alura.alura_design_patterns.capitulo_2.regras;
 import br.com.alura.alura_design_patterns.capitulo_1.modelo.Orcamento;
 import br.com.alura.alura_design_patterns.capitulo_2.modelo.Item;
 
-public class DescontoPorVendaCasada implements Desconto {
+public class DescontoPorVendaCasada extends AbstractDesconto {
 
-	private Desconto proximo;
+	public DescontoPorVendaCasada(Desconto proximo) {
+		super(proximo);
+	}
 
 	@Override
 	public double descontar(Orcamento orcamento) {
@@ -13,11 +15,6 @@ public class DescontoPorVendaCasada implements Desconto {
 			return orcamento.getValor() * 0.05;
 		}
 		return proximo.descontar(orcamento);
-	}
-
-	@Override
-	public void setProximo(Desconto proximo) {
-		this.proximo = proximo;
 	}
 
 	private boolean aplicavel(Orcamento orcamento) {
