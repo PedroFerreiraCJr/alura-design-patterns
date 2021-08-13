@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import br.com.alura.alura_design_patterns.capitulo_2.modelo.Item;
-
 public class Orcamento {
 	private final Double valor;
 	private final List<Item> itens;

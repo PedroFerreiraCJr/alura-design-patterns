@@ -1,4 +1,4 @@
-package br.com.alura.alura_design_patterns.capitulo_2.modelo;
+package br.com.alura.alura_design_patterns.capitulo_1.modelo;
 
 public class Item {
 

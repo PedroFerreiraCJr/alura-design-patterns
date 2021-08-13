@@ -1,9 +1,4 @@
-## Este capítulo implemnta o design pattern Chain Of Responsability.
-A regra a ser implementada dessa vez é a regra de descontos. Dado um orçamento, este pode estar ou não elegível a receber um desconto.
+## Chain Of Responsability
+O padrão Chain of Responsibility cai como uma luva quando temos uma lista de comandos a serem executados de acordo com algum cenário em específico, e sabemos também qual o próximo cenário que deve ser validado, caso o anterior não satisfaça a condição.
 
-## Regras
-1. Se o orçamento tiver mais que cinco (5) itens, recebe desconto de 10%.
-2. Se o orçamento tiver valor acima de quinhentos reais (R$ 500.0), aplica desconto de 7%;
-
-## Explicação da Solução
-Uma cadeia de execuções buscando pelo desconto que deve ser aplicado conforme a regra que se aplica. Cada nó da cadeia tem uma condição para ser aplicado, e caso uma condição for atendida, o resultado, que é o desconto deve ser calculado. Também devemos pensar na condição em que nenhuma regra se aplica, portanto, não havendo desconto.
+Nesses casos, o Chain of Responsibility nos possibilita a separação de responsabilidades em classes pequenas e enxutas, e ainda provê uma maneira flexível e desacoplada de juntar esses comportamentos novamente.
