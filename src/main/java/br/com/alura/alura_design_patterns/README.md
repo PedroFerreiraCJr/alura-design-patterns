@@ -1,0 +1,2 @@
+## Este capítulo implementa o design pattern Template Method.
+Essa implementação traz mais algoritmos para calculo de imposto, mas dessa vez, os impostos a serem calculados tem mais coisas em comum ainda. Portanto, é possível estabelecer as semelhantes nas assinaturas dos métodos e deixar métodos abstratos para que as classes concretas implementem a lógica para saber se devem ou não aplicar o valor máximo ou mínimo de um imposto.
