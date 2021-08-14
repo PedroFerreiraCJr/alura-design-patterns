@@ -1,2 +1,8 @@
-## Este capítulo implementa o design pattern Template Method.
-Essa implementação traz mais algoritmos para calculo de imposto, mas dessa vez, os impostos a serem calculados tem mais coisas em comum ainda. Portanto, é possível estabelecer as semelhantes nas assinaturas dos métodos e deixar métodos abstratos para que as classes concretas implementem a lógica para saber se devem ou não aplicar o valor máximo ou mínimo de um imposto.
+## Este capítulo tem por objetivo implementar o design pattern Decorator.
+O design pattern decorator tem por objetivo decorar objetos para que determinada funcionalidade seja incrementada com um comportamento.
+
+## Contexto
+É necessário desenvolver um calculo de imposto de forma composto, onde os impostos possam variar, e deve ser possível calcular o imposto dado um ou mais impostos quaisquer.
+
+## Explicação da solução
+Utilizando o design pattern decorator, é possível tornar o calculo de imposto composto de um ou mais impostos dado um orçamento.

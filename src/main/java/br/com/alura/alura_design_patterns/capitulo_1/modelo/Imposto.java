@@ -1,9 +1,24 @@
 package br.com.alura.alura_design_patterns.capitulo_1.modelo;
 
-public interface Imposto {
-	/**
-	 * Dado que todos os tipos de impostos dever receber uma orçamento é possível
-	 * extrair uma interface de programação em comum aos impostos
-	 */
+public abstract class Imposto {
+
+	protected Imposto outroImposto;
+
+	protected Imposto() {
+		super();
+	}
+
+	protected Imposto(Imposto outroImposto) {
+		super();
+		this.outroImposto = outroImposto;
+	}
+
+	protected double calcularOutroImposto(Orcamento orcamento) {
+		if (this.outroImposto == null) {
+			return 0;
+		}
+		return this.outroImposto.calcular(orcamento);
+	}
+
 	public abstract double calcular(Orcamento orcamento);
 }
