@@ -1,0 +1,2 @@
+## Contexto
+É necessário filtrar contas que tenham critérios de fraude segundo uma determinada empresa bancária. Dado a classe Filtro, uma abstração do sistema, foi implementado dois filtro utilizando o conceito do design pattern **Decorator**.
